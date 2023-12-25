@@ -62,7 +62,7 @@ class HttpRequest:
     @staticmethod
     def get_http_header(http_code = HTTP_CODE_200_OK,
                         content_type = CONTENT_TYPE_JSON):
-        return f'HTTP/1.0 {http_code}\r\nContent-type: {content_type}\r\n\r\n'
+        return f'HTTP/1.0 {http_code}\r\nContent-type: {content_type}\r\n'
     
     @staticmethod
     def get_http_json_reply(obj, http_code = HTTP_CODE_200_OK):

@@ -95,7 +95,6 @@ async def main():
 
     http_server = HttpServer()
 
-    http_server.on('/get/ip', lambda _: (HTTP_CODE_200_OK, { 'ip': wifi_connector.public_interface }))
     http_server.on('/strip/play/snowflake', on_play_snowflake)
     http_server.on('/strip/play/sparkling', on_play_sparkling)
     http_server.on('/strip/play/color', on_play_solid_color)

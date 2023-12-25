@@ -217,6 +217,8 @@ class HttpServer:
             status_code, content = handler(http_request.queries)
 
             writer.write(HttpRequest.get_http_header(http_code=status_code, content_type=content_type))
+            writer.write('Access-Control-Allow-Origin: *\r\n')
+            writer.write('\r\n')
 
             if content_type == CONTENT_TYPE_JSON:
                 writer.write(json.dumps(content))
